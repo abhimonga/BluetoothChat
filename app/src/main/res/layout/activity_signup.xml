@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Signup"
+        android:orientation="vertical"
+        android:padding="50dp">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_your_name"
+        android:id="@+id/name"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="@string/enter_your_age"
+        android:id="@+id/age"/>
+
+    <RadioGroup
+        android:id="@+id/radioSex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:text="@string/enter_your_gender"
+            android:textSize="18sp"/>
+
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/male" />
+
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/female" />
+
+    </RadioGroup>
+    <RadioGroup
+        android:id="@+id/interest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:text="@string/enter_your_interest"
+            android:textSize="18sp" />
+        <RadioButton
+            android:id="@+id/single"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/single"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/commited"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/commited" />
+        <RadioButton
+            android:id="@+id/complicated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/complicated" />
+        <RadioButton
+            android:id="@+id/unknown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rather_not_say" />
+
+    </RadioGroup>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:id="@+id/submit"
+        android:layout_gravity="center_horizontal"/>
+
+
+</LinearLayout>
+
+

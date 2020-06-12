@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Testapp</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="signUp" />
+    <string name="fullName" />
+    <string name="email" />
+    <string name="mobileNumber" />
+    <string name="location" />
+    <string name="enter_your_name">Enter your name</string>
+    <string name="enter_your_age">Enter your age</string>
+    <string name="radio_male" />
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="enter_your_gender">Enter your gender</string>
+    <string name="enter_your_interest">Enter your interest</string>
+    <string name="single">Single</string>
+    <string name="commited">Commited</string>
+    <string name="complicated">Complicated</string>
+    <string name="rather_not_say">Rather not say</string>
+    <string name="submit">Submit</string>
+</resources>
