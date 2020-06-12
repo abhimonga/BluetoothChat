@@ -47,7 +47,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         bluetoothAdapter=BluetoothAdapter.getDefaultAdapter();
-       bluetoothAdapter.setName("Abhinav");
+      boolean res= bluetoothAdapter.setName("Abhinav");
+      debug("result is"+res);
 //        Stitch.initializeAppClient("bluetooth-duacw");
 //        stitchAppClient = Stitch.getAppClient("bluetooth-duacw");
 //        stitchAppClient.getAuth().loginWithCredential(new AnonymousCredential());
