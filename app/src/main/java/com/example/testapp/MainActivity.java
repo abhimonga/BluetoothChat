@@ -40,63 +40,31 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private static String TAG="MainActivity";
     StitchAppClient stitchAppClient;
-    private BluetoothAdapter bluetoothAdapter;
+
     BluetoothGatt bluetoothGatt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        bluetoothAdapter=BluetoothAdapter.getDefaultAdapter();
-      boolean res= bluetoothAdapter.setName("Abhinav");
-      debug("result is"+res);
-//        Stitch.initializeAppClient("bluetooth-duacw");
-//        stitchAppClient = Stitch.getAppClient("bluetooth-duacw");
-//        stitchAppClient.getAuth().loginWithCredential(new AnonymousCredential());
-////        final String SECURE_SETTINGS_BLUETOOTH_ADDRESS = "bluetooth_address";
-////
-////        String macAddress = Settings.Secure.getString(getContentResolver(), SECURE_SETTINGS_BLUETOOTH_ADDRESS);
-//        BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-//        String bluetoothMacAddress = "";
-//        try {
-//            Field mServiceField = bluetoothAdapter.getClass().getDeclaredField("mService");
-//            mServiceField.setAccessible(true);
-//
-//            Object btManagerService = mServiceField.get(bluetoothAdapter);
-//
-//            if (btManagerService != null) {
-//                bluetoothMacAddress = (String) btManagerService.getClass().getMethod("getAddress").invoke(btManagerService);
-//            }
-//        } catch (NoSuchFieldException | InvocationTargetException | IllegalAccessException | NoSuchMethodException e) {
-//
-//        }
 
 
-//
-
+         BluetoothAdapter bluetoothAdapter = null;
+        bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        debug(bluetoothAdapter.getName());
+        //   ChangeDeviceName(bluetoothAdapter);
        //  debug(add);
         //    exist(bluetoothMacAddress);
-        //   startActivity(new Intent(this,Discover.class));
-        //go to next activity
+
 
 
     }
-//    private final ScanCallback scanCallback = new ScanCallback() {
-//        @Override
-//        public void onScanResult(int callbackType, ScanResult result) {
-//            BluetoothDevice device = result.getDevice();
-//
-//        }
-//
-//        @Override
-//        public void onBatchScanResults(List<ScanResult> results) {
-//            // Ignore for now
-//        }
-//
-//        @Override
-//        public void onScanFailed(int errorCode) {
-//            // Ignore for now
-//        }
-//    };
+
+ public   void ChangeDeviceName(BluetoothAdapter bluetoothAdapter){
+        debug(bluetoothAdapter.getName()+" "+bluetoothAdapter.getAddress());
+        bluetoothAdapter.setName("NewDeviceName");
+        debug(bluetoothAdapter.getName()+" "+bluetoothAdapter.getAddress());
+    }
+
     public void exist(String address){
 
         RemoteMongoClient mongoclient = stitchAppClient.getServiceClient(RemoteMongoClient.factory, "mongodb-atlas");
